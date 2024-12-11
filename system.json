@@ -35,8 +35,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "https://github.com/elfonochasis/Sistema-Hitos-Foundry-VTT",
-  "manifest": "https://raw.githubusercontent.com/elfonochasis/Sistema-Hitos-Foundry-VTT/main/system.json",
-  "download": "https://github.com/elfonochasis/Sistema-Hitos-Foundry-VTT/archive/refs/tags/v1.2.0.zip",
+  "url": "https://github.com/EdgarPerez/Sistema-Hitos-Foundry-VTT",
+  "manifest": "https://raw.githubusercontent.com/EdgarPerez/Sistema-Hitos-Foundry-VTT/refs/heads/main/system.json",
+  "download": "https://github.com/EdgarPerez/Sistema-Hitos-Foundry-VTT/archive/refs/heads/main.zip",
   "license": "LICENSE.txt"
 }

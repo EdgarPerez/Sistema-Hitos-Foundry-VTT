@@ -3,6 +3,7 @@ import { hitos} from "./config.js";
 import * as Chat from "./chat.js";
 import { HitosActor } from "./actor/actor.js";
 import { HitosActorSheet } from "./actor/actor-sheet.js";
+import { CultosActorSheet } from "./actor/cultos-sheet.js";
 import { HitosItem } from "./item/item.js";
 import { HitosItemSheet } from "./item/item-sheet.js";
 import { registerSettings } from "./settings.js";
@@ -64,6 +65,7 @@ Hooks.once('init', async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("hitos", HitosActorSheet, { makeDefault: true });
+  Actors.registerSheet("hitos", CultosActorSheet);
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("hitos", HitosItemSheet, { makeDefault: true });
 

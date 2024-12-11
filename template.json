@@ -205,38 +205,8 @@
             "available": true,
             "gameModule": "core"
           },
-          "psiquico": {
-            "label": "Hitos.Psiquico",
-            "concept": "",
-            "value": 0,
-            "min": 0,
-            "max": 12,
-            "spent": false,
-            "available": true,
-            "gameModule": "cultos"
-          },
           "ocultismo": {
             "label": "Hitos.Ocultismo",
-            "concept": "",
-            "value": 0,
-            "min": 0,
-            "max": 12,
-            "spent": false,
-            "available": true,
-            "gameModule": "cultos"
-          },
-          "brujeria": {
-            "label": "Hitos.Brujeria",
-            "concept": "",
-            "value": 0,
-            "min": 0,
-            "max": 12,
-            "spent": false,
-            "available": true,
-            "gameModule": "cultos"
-          },
-          "arcanas": {
-            "label": "Hitos.Arcanas",
             "concept": "",
             "value": 0,
             "min": 0,
@@ -255,7 +225,7 @@
             "available": true,
             "gameModule": "lcdt"
           },
-          "adicional1": {
+          "arcana1": {
             "label": "",
             "concept": "",
             "value": 0,
@@ -263,9 +233,9 @@
             "max": 12,
             "spent": false,
             "available": true,
-            "gameModule": "core"
+            "gameModule": "cultos"
           },
-          "adicional2": {
+          "arcana2": {
             "label": "",
             "concept": "",
             "value": 0,
@@ -273,9 +243,9 @@
             "max": 12,
             "spent": false,
             "available": true,
-            "gameModule": "core"
+            "gameModule": "cultos"
           },
-          "adicional3": {
+          "arcana3": {
             "label": "",
             "concept": "",
             "value": 0,
@@ -283,9 +253,9 @@
             "max": 12,
             "spent": false,
             "available": true,
-            "gameModule": "core"
+            "gameModule": "cultos"
           },
-          "adicional4": {
+          "arcana4": {
             "label": "",
             "concept": "",
             "value": 0,
@@ -293,7 +263,17 @@
             "max": 12,
             "spent": false,
             "available": true,
-            "gameModule": "core"
+            "gameModule": "cultos"
+          },
+          "arcana5": {
+            "label": "",
+            "concept": "",
+            "value": 0,
+            "min": 0,
+            "max": 12,
+            "spent": false,
+            "available": true,
+            "gameModule": "cultos"
           }
         }
       }

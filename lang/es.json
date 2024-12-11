@@ -13,6 +13,11 @@
   "Hitos.Roll.Resultado": "Resultado",
   "Hitos.Roll.Dano": "Daño",
   "Hitos.Roll.Tirada": "Tirada",
+  "Hitos.Roll.Arcana": "Arcana",
+  "Hitos.Roll.Uso": "Uso",
+  "Hitos.Roll.UsoMenor": "Menor",
+  "Hitos.Roll.UsoIntermedio": "Intermedio",
+  "Hitos.Roll.UsoMayor": "Mayor",
   "Hitos.Roll.Modificador": "Modificador",
   "Hitos.Roll.NuevoResultado": "Nuevo resultado",
   "Hitos.Roll.TiradaAnterior": "Tirada anterior",
@@ -105,5 +110,8 @@
   "Hitos.EnableMentalHealthHint": "Marcar si tu juego tiene salud mental (cultos innombrables)",
   "Hitos.CultosInnombrables": "Cultos Innombrables",
   "Hitos.LasCorrientesDelTiempo": "Las Corrientes Del Tiempo",
-  "Hitos.Core": "Core"
+  "Hitos.Terror": "Terror",
+  "Hitos.Core": "Core",
+  "Hitos.Exito": "Exito",
+  "Hitos.Fallo": "Fallo"
 }

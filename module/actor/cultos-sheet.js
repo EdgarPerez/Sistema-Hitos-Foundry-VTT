@@ -1,9 +1,9 @@
-import { _onCheckRoll, _onInitRoll, _onAttackRoll, _onStatusRoll, _onDramaRoll} from '../dice.js';
+import { _onCheckRoll, _onInitRoll, _onAttackRoll, _onStatusRoll, _onDramaRoll, _onArcanaRoll} from '../dice.js';
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class HitosActorSheet extends ActorSheet {
+export class CultosActorSheet extends ActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -11,7 +11,7 @@ export class HitosActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["hitos", "sheet", "actor"],
-      template: "systems/hitos/templates/actor/actor-sheet.html",
+      template: "systems/hitos/templates/actor/cultos-sheet.html",
       width: 740,
       height: 700,
       tabs: [{
@@ -24,13 +24,7 @@ export class HitosActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    const path = "systems/hitos/templates/actor";
-    // Return a single sheet for all item types.
-    return `${path}/${this.actor.type}-sheet.html`;
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
-
-    // return `${path}/${this.item.data.type}-sheet.html`;
+    return this.options.template;
   }
   /* -------------------------------------------- */
   async _enrichTextFields(data, fieldNameArr) {
@@ -130,17 +124,22 @@ export class HitosActorSheet extends ActorSheet {
       _onInitRoll(this.actor);
     });
 
-    html.find(".rollable-attack").click((ev) => {
+    html.find(".rollable-arcana").click((ev) => {
       ev.preventDefault();
-      let weapon = this.actor.items.get(ev.currentTarget.dataset.itemid).system;
-      _onAttackRoll(this.actor,weapon);
+      let habilidad = ev.currentTarget.dataset.habilidad;
+      let habilidadValor = foundry.utils.getProperty(
+        this.actor.system,
+        `habilidades.${habilidad}.value`
+      );
+      let habilidadNombre = foundry.utils.getProperty(
+        this.actor.system,
+        `habilidades.${habilidad}.label`
+      );
+      
+      _onArcanaRoll(this.actor,habilidadValor,habilidadNombre);
     });
 
-    html.find(".rollable-status").click((ev) => {
-      ev.preventDefault();
-      let status = ev.currentTarget.dataset.status;
-      _onStatusRoll(this.actor,status);
-    });
+    
 
     //html.find('.stat-row').hover(ev => {$(ev.currentTarget).children('.spent-concept').toggleClass('hide');   })
 
