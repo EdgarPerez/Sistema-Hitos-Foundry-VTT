@@ -65,6 +65,7 @@
           "mod":0,
           "degeneracion": {
             "value": 0,
+            "mod": 0,
             "description": ""
           }
         },

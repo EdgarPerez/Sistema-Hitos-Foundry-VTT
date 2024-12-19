@@ -139,7 +139,17 @@ export class CultosActorSheet extends ActorSheet {
       _onArcanaRoll(this.actor,habilidadValor,habilidadNombre);
     });
 
-    
+    html.find(".rollable-attack").click((ev) => {
+      ev.preventDefault();
+      let weapon = this.actor.items.get(ev.currentTarget.dataset.itemid).system;
+      _onAttackRoll(this.actor,weapon);
+    });
+
+    html.find(".rollable-status").click((ev) => {
+      ev.preventDefault();
+      let status = ev.currentTarget.dataset.status;
+      _onStatusRoll(this.actor,status);
+    });
 
     //html.find('.stat-row').hover(ev => {$(ev.currentTarget).children('.spent-concept').toggleClass('hide');   })
 
@@ -163,7 +173,7 @@ export class CultosActorSheet extends ActorSheet {
     html.find(".item-toggle").click(ev => {
       ev.preventDefault();
       let armor = this.actor.items.get(ev.currentTarget.dataset.itemid);
-      armor.update({data: {equipped: !armor.system.equipped}});
+      armor.update({system: {equipped: !armor.system.equipped}});
       //armor.equipped = (armor.equipped === false ? true : false);
       this.actor._calculateRD(this.actor)
     })

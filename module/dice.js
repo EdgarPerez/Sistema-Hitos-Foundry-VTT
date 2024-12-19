@@ -37,6 +37,10 @@ export async function _onInitRoll(actor) {
         config: CONFIG.hitos,
     };
     let html = await renderTemplate(template, dialogData);
+    if(game.combat != null && game.combat.getCombatantByActor(actor._id)){
+        let combatantId = game.combat.getCombatantByActor(actor._id)._id;
+        game.combat.setInitiative(combatantId, values[0]);
+    }
     ChatMessage.create({
         content: html,
         speaker: {alias: actor.name},

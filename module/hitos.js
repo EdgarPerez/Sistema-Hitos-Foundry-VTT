@@ -64,8 +64,8 @@ Hooks.once('init', async function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("hitos", HitosActorSheet, { makeDefault: true });
-  Actors.registerSheet("hitos", CultosActorSheet);
+  Actors.registerSheet("hitos", HitosActorSheet);
+  Actors.registerSheet("hitos", CultosActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("hitos", HitosItemSheet, { makeDefault: true });
 
